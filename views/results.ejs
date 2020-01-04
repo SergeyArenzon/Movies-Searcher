@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <title>RESULT</title>
+</head>
+
+<body>
+    <% if(data["Error"] === undefined){ %>
+    <h1>RESULT:</h1>
+
+    <ul>
+        <% data["Search"].forEach(function(movie){ %>
+            
+            <li> -Title: <%= movie["Title"] %> -Year: <%= movie["Year"] %> <img src=<%= movie["Poster"] %> height="42" width="42"></li>
+            
+        <% }) %>
+    </ul>
+
+
+<% }else{ %> 
+    <h1 class = "notFound"> Movie Not Found!</h1>   
+<% } %>
+
+
+<a href = "/" >Search Again!</a>
+</body>
+</html>
+
+
